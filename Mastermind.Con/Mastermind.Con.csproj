@@ -6,4 +6,8 @@
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Mastermind.Core\Mastermind.Core.csproj" />
+    </ItemGroup>
+
 </Project>

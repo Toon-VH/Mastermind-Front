@@ -1,6 +1,6 @@
 ﻿namespace Mastermind.Core
 {
-    public enum Colors
+    public enum AttemptColor
     {
         Red,Green,Blue,Purple,Yellow,Orange
     }
