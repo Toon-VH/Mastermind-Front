@@ -14,7 +14,7 @@ namespace Mastermind.Test
         [Test]
         public void Test1()
         {
-            Core.Mastermind mstrm = new Core.Mastermind(lenghtGame: 6);
+            Core.MastermindEngine mstrm = new Core.MastermindEngine(lenghtGame: 6);
             Assert.AreEqual(6, mstrm.GameLenght);
             Assert.AreEqual(4, mstrm.RowLength);
             Assert.AreEqual(6, mstrm.ColorsAmount);

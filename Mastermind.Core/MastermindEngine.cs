@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Mastermind.Core
 {
-    public class Mastermind
+    public class MastermindEngine
     {
         public int RowLength { get; set; }
         public int GameLenght { get; set; }
@@ -12,7 +12,7 @@ namespace Mastermind.Core
         public AttemptColor[] Code { get; set; }
         public List<Row> Attempts { get; set; }
 
-        public Mastermind(int rowLength = 4, int lenghtGame = 9, int colorsAmount = 6)
+        public MastermindEngine(int rowLength = 4, int lenghtGame = 9, int colorsAmount = 6)
         {
             RowLength = rowLength;
             GameLenght = lenghtGame;
@@ -77,37 +77,7 @@ namespace Mastermind.Core
             });
         }
 
-        // private AttemptColor StringToColor(string color)
-        // {
-        //     AttemptColor result;
-        //     switch (color)
-        //     {
-        //         case "Red":
-        //             result = AttemptColor.Red;
-        //             break;
-        //         case "Green":
-        //             result = AttemptColor.Green;
-        //             break;
-        //         case "Yellow":
-        //             result = AttemptColor.Yellow;
-        //             break;
-        //         case "Blue":
-        //             result = AttemptColor.Blue;
-        //             break;
-        //         case "Purple":
-        //             result = AttemptColor.Purple;
-        //             break;
-        //         case "Orange":
-        //             result = AttemptColor.Orange;
-        //             break;
-        //
-        //         default:
-        //             result = AttemptColor.Red;
-        //             break;
-        //     }
-        //
-        //     return result;
-        // }
+            
 
         private AttemptColor[] Random()
         {
