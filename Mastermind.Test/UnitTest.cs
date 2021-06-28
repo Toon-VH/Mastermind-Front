@@ -20,10 +20,10 @@ namespace Mastermind.Test
             Assert.AreEqual(6, mstrm.ColorsAmount);
 
             mstrm.Code = new[]{AttemptColor.Blue,AttemptColor.Red,AttemptColor.Green,AttemptColor.Green};
-            var colors = new[]{AttemptColor.Green,AttemptColor.Red,AttemptColor.Purple,AttemptColor.Green};
+            var colors = new[]{AttemptColor.Green,AttemptColor.Red,AttemptColor.Magenta,AttemptColor.Green};
             var colors2 = new[]{AttemptColor.Blue,AttemptColor.Red,AttemptColor.Green,AttemptColor.Green};
-            var colors3 = new[]{AttemptColor.Purple,AttemptColor.Red,AttemptColor.Red,AttemptColor.Green};
-            var colors4 = new[]{AttemptColor.Red,AttemptColor.Blue,AttemptColor.Green,AttemptColor.Orange};
+            var colors3 = new[]{AttemptColor.Magenta,AttemptColor.Red,AttemptColor.Red,AttemptColor.Green};
+            var colors4 = new[]{AttemptColor.Red,AttemptColor.Blue,AttemptColor.Green,AttemptColor.Magenta};
 
             mstrm.SaveAttempt(colors);
             Assert.False(mstrm.Validate());
@@ -57,10 +57,10 @@ namespace Mastermind.Test
             mstrm.CalculateHints();
             Assert.AreEqual(0,mstrm.Attempts.Last().CorrectPositionColor);
             Assert.AreEqual(2,mstrm.Attempts.Last().CorrectColor);
+        }
 
-            
-            
-            
+        public void Test2()
+        {
             
         }
         

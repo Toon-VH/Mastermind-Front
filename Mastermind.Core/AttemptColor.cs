@@ -2,6 +2,6 @@
 {
     public enum AttemptColor
     {
-        Red,Green,Blue,Purple,Yellow,Orange
+        Red,Green,Blue,Magenta,Yellow,Cyan
     }
 }

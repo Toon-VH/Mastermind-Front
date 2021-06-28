@@ -57,7 +57,6 @@ namespace Mastermind.Core
                 for (int j = 0; j < RowLength; j++)
                 {
                     if (indexes.Contains(j)) continue;
-                    //var color = Attempts.Last().AttemptColors[j];
 
                     if (Code[i] == Attempts.Last().AttemptColors[j])
                     {
@@ -82,9 +81,7 @@ namespace Mastermind.Core
         private AttemptColor[] Random()
         {
             AttemptColor[] array = new AttemptColor[RowLength];
-            for (int i = 0;
-                i < RowLength;
-                i++)
+            for (int i = 0; i < RowLength; i++)
             {
                 array[i] = RandomColorPicker();
             }
@@ -95,7 +92,7 @@ namespace Mastermind.Core
         private AttemptColor RandomColorPicker()
         {
             var rand = new Random();
-            var rdm = rand.Next(1, ColorsAmount - 1);
+            var rdm = rand.Next(0, ColorsAmount);
             return (AttemptColor) rdm;
         }
     }
