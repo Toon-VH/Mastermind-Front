@@ -1,0 +1,46 @@
+﻿@page "/mastermind"
+@using global::Mastermind.Core
+
+<h1>Mastermind</h1>
+
+@foreach (var attempt in _engine.Attempts)
+{
+    foreach (var ac in attempt.AttemptColors)
+    {
+        switch (ac)
+        {
+            case AttemptColor.Red:<div>R</div>
+                break;
+            case AttemptColor.Green:<div>G</div>
+                break;
+            case AttemptColor.Blue:<div>B</div>
+                break;
+            case AttemptColor.Magenta:<div>M</div>
+                break;
+            case AttemptColor.Yellow:<div>Y</div>
+                break;
+            case AttemptColor.Cyan:<div>C</div>
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+}
+
+@for (var i = 0; i < _engine.GameLenght - _engine.Attempts.Count; i++)
+{
+    <p>Empty line</p>
+}
+
+<button @onclick="IncrementCount">Execute Attempt</button>
+
+@code {
+    private MastermindEngine _engine = new ();
+    
+    
+    private void IncrementCount()
+    {
+       _engine.SaveAttempt(new AttemptColor[] {AttemptColor.Blue,AttemptColor.Blue,AttemptColor.Blue,AttemptColor.Blue});
+    }
+
+}
